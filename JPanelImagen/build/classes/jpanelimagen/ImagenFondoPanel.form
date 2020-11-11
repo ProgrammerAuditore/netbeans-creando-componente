@@ -77,6 +77,10 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JSlider" name="sdrOpacidad">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="value" type="int" value="100"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -47,6 +47,9 @@ public class ImagenFondoPanel extends javax.swing.JPanel {
 
         jLabel2.setText("Opacidad: ");
 
+        sdrOpacidad.setToolTipText("");
+        sdrOpacidad.setValue(100);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -97,7 +100,7 @@ public class ImagenFondoPanel extends javax.swing.JPanel {
     
     public ImagenFondo getSelectValued(){
         File archivo = new File(this.txtfNombreDelArchivo.getText());
-        Float opacidad = (float) this.sdrOpacidad.getValue() / 100;
+        Float opacidad = (float) this.sdrOpacidad.getValue() / 100f;
         return new ImagenFondo(archivo, opacidad);
     }
 
