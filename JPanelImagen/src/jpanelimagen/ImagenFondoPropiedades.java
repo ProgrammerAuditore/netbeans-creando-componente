@@ -28,10 +28,19 @@ public class ImagenFondoPropiedades extends PropertyEditorSupport{
     @Override
     public String getJavaInitializationString() {
         ImagenFondo img = imagenFondoPanel.getSelectValued();
-        return "new jpanelimagen.ImagenFondo("
+        
+        if(System.getProperty("os.name").equals("Windows 10")){
+            return "new jpanelimagen.ImagenFondo("
+                +"new java.io.File(\"" + img.getRutaImagen().getAbsolutePath().replace('\\', '/') +"\"),"
+                + img.getOpacity() + "f"
+                +")";
+        }else{
+            return "new jpanelimagen.ImagenFondo("
                 +"new java.io.File(\"" + img.getRutaImagen().getAbsolutePath() +"\"),"
                 + img.getOpacity() + "f"
-                +")"; //To change body of generated methods, choose Tools | Templates.
+                +")";
+        }
+  
     }
 
     @Override
