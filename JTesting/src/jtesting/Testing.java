@@ -5,6 +5,10 @@
  */
 package jtesting;
 
+import java.io.File;
+import jpanelimagen.ArrastreListener;
+import jpanelimagen.ImagenFondo;
+
 /**
  *
  * @author max98
@@ -17,6 +21,16 @@ public class Testing extends javax.swing.JFrame {
     public Testing() {
         initComponents();
         System.out.println("SO:::"+System.getProperty("os.name"));
+        panelBackground.addArrastreListener( new ArrastreListener() {
+            
+            @Override
+            public void arrastre() {
+                System.out.println("Se ha producido un arrastre");
+                panelBackground.setImagenFondo(new ImagenFondo( new java.io.File("P:/Documents/NetBeansProjects/netbeans-creando-componente/JTesting/src/img/Linux.png"),1.0f ));
+            }
+            
+        });
+        
     }
 
     /**
@@ -28,32 +42,38 @@ public class Testing extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelImagen1 = new jpanelimagen.JPanelImagen();
+        panelBackground = new jpanelimagen.JPanelImagen();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelImagen1.setImagenFondo(new jpanelimagen.ImagenFondo(new java.io.File("P:/Documents/NetBeansProjects/netbeans-creando-componente/JTesting/src/img/ProgrammerAuditore.jpeg"),1.0f));
+        panelBackground.setImagenFondo(new jpanelimagen.ImagenFondo(new java.io.File("P:/Documents/NetBeansProjects/netbeans-creando-componente/JTesting/src/img/ProgrammerAuditore.jpeg"),1.0f));
 
-        javax.swing.GroupLayout jPanelImagen1Layout = new javax.swing.GroupLayout(jPanelImagen1);
-        jPanelImagen1.setLayout(jPanelImagen1Layout);
-        jPanelImagen1Layout.setHorizontalGroup(
-            jPanelImagen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 707, Short.MAX_VALUE)
+        javax.swing.GroupLayout panelBackgroundLayout = new javax.swing.GroupLayout(panelBackground);
+        panelBackground.setLayout(panelBackgroundLayout);
+        panelBackgroundLayout.setHorizontalGroup(
+            panelBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 472, Short.MAX_VALUE)
         );
-        jPanelImagen1Layout.setVerticalGroup(
-            jPanelImagen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+        panelBackgroundLayout.setVerticalGroup(
+            panelBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 415, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelImagen1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(panelBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelImagen1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(panelBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();
@@ -95,6 +115,6 @@ public class Testing extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private jpanelimagen.JPanelImagen jPanelImagen1;
+    private jpanelimagen.JPanelImagen panelBackground;
     // End of variables declaration//GEN-END:variables
 }
