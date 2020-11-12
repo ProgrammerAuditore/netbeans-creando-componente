@@ -7,6 +7,7 @@ package jpanelimagen;
 
 import java.io.File;
 import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -88,7 +89,9 @@ public class ImagenFondoPanel extends javax.swing.JPanel {
     private void btnSeleccionarArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarArchivoActionPerformed
         // TODO add your handling code here:
         JFileChooser elegirArchivo = new JFileChooser();
-        
+        elegirArchivo.setAcceptAllFileFilterUsed(false);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("gif","jpg","jpeg", "png");
+        elegirArchivo.addChoosableFileFilter(filter);
         int respuesta = elegirArchivo.showOpenDialog(this);
         
         if( respuesta == JFileChooser.APPROVE_OPTION ){
