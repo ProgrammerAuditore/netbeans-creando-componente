@@ -26,7 +26,7 @@ public class Testing extends javax.swing.JFrame {
             @Override
             public void arrastre() {
                 System.out.println("Se ha producido un arrastre");
-                jPanelImagen1.setImagenFondo(new ImagenFondo( new java.io.File("/home/max98/NetBeansProjects/netbeans-creando-componente/JTesting/src/img/linux.png"),1.0f ));
+                jPanelImagen1.setImagenFondo(new ImagenFondo( new java.io.File("P:/Documents/NetBeansProjects/netbeans-creando-componente/JTesting/src/img/linux.png"), 1.0f ));
             }
             
         });
@@ -46,17 +46,17 @@ public class Testing extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelImagen1.setImagenFondo(new jpanelimagen.ImagenFondo(new java.io.File("/home/max98/Screenshot_20201002_183517.png"),1.0f));
+        jPanelImagen1.setImagenFondo(new jpanelimagen.ImagenFondo(new java.io.File("P:/Documents/NetBeansProjects/netbeans-creando-componente/JTesting/src/img/ProgrammerAuditore.jpeg"),1.0f));
 
         javax.swing.GroupLayout jPanelImagen1Layout = new javax.swing.GroupLayout(jPanelImagen1);
         jPanelImagen1.setLayout(jPanelImagen1Layout);
         jPanelImagen1Layout.setHorizontalGroup(
             jPanelImagen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 641, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
         jPanelImagen1Layout.setVerticalGroup(
             jPanelImagen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 445, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -64,16 +64,16 @@ public class Testing extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(87, 87, 87)
+                .addGap(320, 320, 320)
                 .addComponent(jPanelImagen1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(431, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(184, 184, 184)
                 .addComponent(jPanelImagen1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(233, Short.MAX_VALUE))
         );
 
         pack();

@@ -14,7 +14,7 @@ import java.beans.PropertyEditorSupport;
  */
 public class ImagenFondoPropiedades extends PropertyEditorSupport{
 
-    private ImagenFondoPanel imagenFondoPanel = new ImagenFondoPanel();
+    private ImagenFondoPanel imagenFondoPanel = new ImagenFondoPanel();    
     @Override
     public boolean supportsCustomEditor() {
         return true; //To change body of generated methods, choose Tools | Templates.
@@ -30,7 +30,7 @@ public class ImagenFondoPropiedades extends PropertyEditorSupport{
         ImagenFondo img = imagenFondoPanel.getSelectValued();
                 
         return "new jpanelimagen.ImagenFondo("
-        +"new java.io.File(\"" + img.getRutaImagen().getAbsolutePath() +"\"),"
+        +"new java.io.File(\"" + img.getRutaImagen().getAbsolutePath().replace('\\', '/') +"\"),"
         + img.getOpacity() + "f"
         +")";
 
